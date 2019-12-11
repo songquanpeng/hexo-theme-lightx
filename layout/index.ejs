@@ -1,4 +1,23 @@
-<%-partial('partials/post-list')%>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-12 col-md-7 offset-md-1">
+        <%-partial('partials/post-list')%>
+    </div>
+    <div class="col-sm-12 col-md-3">
+      <div class="card shadow-box bg-transparent" style="margin-bottom: 16px">
+        <div class="card-header font-weight-bold">Notice</div>
+        <div class="container" style="padding-top: 8px"></div>
+      </div>
+      <div class="card shadow-box bg-transparent" style="margin-bottom: 16px">
+        <div class="card-header font-weight-bold">Tags Cloud</div>
+        <div class="container" style="padding-top: 8px">
+          <%- tagcloud({ min_font: 16, max_font: 35, amount: 999, color: true,
+          start_color: 'gray', end_color: 'black', }) %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 <div id="paginator">
   <%-paginator()%>

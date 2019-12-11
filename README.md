@@ -1,5 +1,5 @@
 ## Hexo theme lightx
 
 ## Config
-1. /_config.yml: `enable: false`
-2. /_config.yml: `theme: lightx`
+1. /_config.yml about line 47 highlight `enable: false`
+2. /_config.yml about line 95 `theme: lightx`
