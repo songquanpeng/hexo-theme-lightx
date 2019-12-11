@@ -1,0 +1,58 @@
+<% if (page.posts.length > 0) { %>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-12 col-md-7 offset-md-1">
+        <% page.posts.sort('date', -1).limit(10).each(post => { %>
+        <div
+          class="card article-list shadow-box bg-transparent"
+          onclick="location.href='<%=url_for(post.path)%>'"
+          style="margin-bottom: 16px;cursor: pointer"
+        >
+          <div class="card-body">
+            <h4
+              class="card-title font-weight-bold"
+              onclick="location.href='<%=url_for(post.path)%>'"
+            >
+              <%= post.title %>
+            </h4>
+            <div>
+              <% post.tags.forEach(function (tag) { %>
+              <span class="badge badge-primary badge-hover"><%= tag %></span>
+              <% }); %>
+              <span class="badge badge-secondary badge-hover"
+                ><%=date(post.date)%></span
+              >
+              <span class="badge badge-info badge-hover">Views: 233 </span>
+            </div>
+            <p class="card-text">
+              <%= post.excerpt %>
+            </p>
+          </div>
+        </div>
+        <% }); %>
+    </div>
+    <div class="col-sm-12 col-md-3">
+      <div class="card shadow-box bg-transparent" style="margin-bottom: 16px">
+        <div class="card-header font-weight-bold">Notice</div>
+        <div class="container" style="padding-top: 8px"></div>
+      </div>
+      <div class="card shadow-box bg-transparent" style="margin-bottom: 16px">
+        <div class="card-header font-weight-bold">About</div>
+        <div class="container" style="padding-top: 8px">
+          <article id="sidebarAbout" style=""></article>
+          <script>
+            $.get("/api/page/about", function(data) {
+              const sidebarAbout = document.getElementById("sidebarAbout");
+              let aboutContent = "No personal introduction.";
+              if (data) {
+                aboutContent = data.content;
+              }
+              sidebarAbout.innerHTML = aboutContent;
+            });
+          </script>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<% } %>
