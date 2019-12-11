@@ -15,16 +15,15 @@
               <%= post.title %>
             </h4>
             <div>
-              <% post.tags.forEach(function (tag) { %>
-              <span class="badge badge-primary badge-hover"><%= tag %></span>
+              <% post.tags.forEach(function(tag) { %>
+              <span class="badge badge-primary badge-hover" onclick="event.stopPropagation();location.href='/tags/<%= tag.name.trim().replace(/\s/g, '-') %>'"><%= tag.name %></span>
               <% }); %>
-              <span class="badge badge-secondary badge-hover"
-                ><%=date(post.date)%></span
-              >
+              <span class="badge badge-secondary badge-hover"  onclick="event.stopPropagation();location.href='/archives/<%= date(post.date).split('-').slice(0,2).join('/') %>'"><%=date(post.date)%></span>
+              <span class="badge badge-success badge-hover" onclick="event.stopPropagation();location.href='<%=url_for(post.path)+`#comment` %>'">Comments: 5 </span>
               <span class="badge badge-info badge-hover">Views: 233 </span>
             </div>
             <p class="card-text">
-              <%= post.excerpt %>
+                <%- truncate(strip_html(post.content), {length: 100, omission: ' ...'}) %>
             </p>
           </div>
         </div>
@@ -36,8 +35,16 @@
         <div class="container" style="padding-top: 8px"></div>
       </div>
       <div class="card shadow-box bg-transparent" style="margin-bottom: 16px">
-        <div class="card-header font-weight-bold">About</div>
+        <div class="card-header font-weight-bold">Tags Cloud</div>
         <div class="container" style="padding-top: 8px">
+            <%- tagcloud({
+              min_font: 16, 
+              max_font: 35, 
+              amount: 999, 
+              color: true, 
+              start_color: 'gray', 
+              end_color: 'black',
+            }) %>
         </div>
       </div>
     </div>

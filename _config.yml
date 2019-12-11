@@ -1,20 +1,5 @@
-author: "IOMETA"
-sitename: "IOMETA 的部落格"
 slogan: "Everything is fine."
-domain: iometa.cn
-language: en
 # CDN, options: cdn.staticfile.org, cdnjs.cloudflare.com, cdnjs.cloudflare.com, 
 cdn: cdn.staticfile.org
-
-menu:
-  Home: /
-  About: /about
-  Contact: /contact
-  Archives: /archives
-
-
-stylesheets:
-- /css/lightx.css
-
-scripts:
-- /js/lightx.js
+# Your disqus "website name"
+disqus: iometa

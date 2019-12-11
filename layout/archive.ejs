@@ -5,6 +5,7 @@ const tagsList = list_tags({ show_count: false });
 const archivesList = list_archives({ show_count: false });
 %>
 
+
 <% if (is_year() === false) { %>
   <div id="archive">
 
@@ -28,15 +29,6 @@ const archivesList = list_archives({ show_count: false });
     </aside>
     <br>
 
-    <aside>
-      <h2>Tags</h2>
-      <% if (tagsList !== "") { %>
-        <%-tagsList%>
-      <% } else { %>
-        <p>None.</p>
-      <% } %>
-    </aside>
-    <br>
 
     <aside>
       <h2>Archives</h2>

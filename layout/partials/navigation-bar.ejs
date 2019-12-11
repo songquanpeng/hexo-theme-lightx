@@ -2,7 +2,7 @@
   class="navbar sticky-top navbar-expand-lg navbar-light font-weight-bold bg-light"
   style="margin-bottom: 16px"
 >
-  <a class="navbar-brand" href="/"><%=theme.author%></a>
+  <a class="navbar-brand" href="/"><%= config.author %></a>
   <button
     class="navbar-toggler"
     type="button"
@@ -70,7 +70,7 @@
           let googleUrl =
             "https://www.google.com/search?q=" +
             keyword +
-            "+site%3A<%=theme.domain%>";
+            "+site%3A<%=config.url%>";
           window.open(googleUrl);
         }
         document
