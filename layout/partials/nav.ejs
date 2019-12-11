@@ -1,0 +1,85 @@
+<nav
+  class="navbar sticky-top navbar-expand-lg navbar-light font-weight-bold bg-light"
+>
+  <a class="navbar-brand" href="/">JustSong</a>
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="/archives"
+          ><i
+            class="fa fa-archive"
+            aria-hidden="true"
+            data-toggle="tooltip"
+            title="archives of articles"
+          ></i>
+          <span class="nav-text">Archives</span></a
+        >
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/links"
+          ><i
+            class="fa fa-link"
+            aria-hidden="true"
+            data-toggle="tooltip"
+            title="friend links"
+          ></i>
+          <span class="nav-text">Links</span></a
+        >
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/about"
+          ><i
+            class="fa fa-address-card"
+            aria-hidden="true"
+            data-toggle="tooltip"
+            title="about me"
+          ></i>
+          <span class="nav-text">About</span></a
+        >
+      </li>
+      <li class="nav-item">
+        <span class="nav-link" id="poetry"></span>
+      </li>
+    </ul>
+    <div class="form-inline my-2 my-lg-0">
+      <input
+        class="form-control mr-sm-2 bg-light"
+        id="search"
+        type="search"
+        placeholder="SEARCH THIS SITE"
+        aria-label="Search"
+        style="border: none"
+      />
+      <script>
+        function search() {
+          let keyword = document
+            .getElementById("search")
+            .value.replace(/\s+/g, "+");
+          let googleUrl =
+            "https://www.google.com/search?q=" +
+            keyword +
+            "+site%3A<%=theme.domain%>";
+          window.open(googleUrl);
+        }
+        document
+          .getElementById("search")
+          .addEventListener("keydown", function(event) {
+            if (event.key === "Enter") {
+              search();
+            }
+          });
+      </script>
+    </div>
+  </div>
+</nav>
