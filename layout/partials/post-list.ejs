@@ -11,7 +11,6 @@
           <div class="card-body">
             <h4
               class="card-title font-weight-bold"
-              onclick="location.href='<%=url_for(post.path)%>'"
             >
               <%= post.title %>
             </h4>
@@ -39,17 +38,6 @@
       <div class="card shadow-box bg-transparent" style="margin-bottom: 16px">
         <div class="card-header font-weight-bold">About</div>
         <div class="container" style="padding-top: 8px">
-          <article id="sidebarAbout" style=""></article>
-          <script>
-            $.get("/api/page/about", function(data) {
-              const sidebarAbout = document.getElementById("sidebarAbout");
-              let aboutContent = "No personal introduction.";
-              if (data) {
-                aboutContent = data.content;
-              }
-              sidebarAbout.innerHTML = aboutContent;
-            });
-          </script>
         </div>
       </div>
     </div>
