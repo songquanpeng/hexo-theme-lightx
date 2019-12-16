@@ -1,7 +1,19 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-sm-12 col-md-7 offset-md-1">
-        <%-partial('partials/post-list')%>
+      <%-partial('partials/post-list')%>
+      <div class="paginator">
+          <% if (page.prev){ %>
+          <div class="prev shadow-box" onclick="location.href='<%- config.root %><%- page.prev_link %>'">
+            PREV
+          </div>
+          <% } %> 
+          <% if (page.next){ %>
+          <div class="next shadow-box" onclick="location.href='<%- config.root %><%- page.next_link %>'">
+            NEXT
+          </div>
+          <% } %> 
+      </div>
     </div>
     <div class="col-sm-12 col-md-3">
       <div class="card shadow-box bg-transparent" style="margin-bottom: 16px">
@@ -19,6 +31,4 @@
   </div>
 </div>
 
-<div id="paginator">
-  <%-paginator()%>
-</div>
+
