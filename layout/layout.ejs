@@ -5,7 +5,7 @@ if (is_tag()) pageTitle = 'Tag: ' + page.tag;
 if (is_category()) pageTitle = 'Category: ' + page.category;
 if (is_month()) pageTitle += ': ' + page.month + '/' + page.year;
 if (is_year()) pageTitle += ': ' + page.year;
-pageTitle += ' [ ' + config.title + ' ]';
+pageTitle += ' | ' + config.title;
 %>
 <!DOCTYPE html>
 <html lang="<%=config.language%>">
@@ -13,6 +13,7 @@ pageTitle += ' [ ' + config.title + ' ]';
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title><%=pageTitle%></title>
+    <link rel="stylesheet" href="<%= theme.highlight %>">
     <link rel="stylesheet" href="/css/lightx.css"/>
   </head>
   <body>
@@ -20,7 +21,7 @@ pageTitle += ' [ ' + config.title + ' ]';
     <div id="content-wrap">
       <div class="wrapper">
         <div class="container">
-            <%-partial('partials/navigation-bar')%>
+            <%-partial('partials/nav')%>
             <%- body %>
         </div>
       </div>
@@ -29,5 +30,13 @@ pageTitle += ' [ ' + config.title + ' ]';
       <%-partial('partials/footer')%>
     </div>
   </div>
+  <% if(theme.disqus && (theme.disqus.trim() !== "")){%>
+    <script id="dsq-count-scr" src="//<%= theme.disqus %>.disqus.com/count.js" async></script>
+  <%}%>
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@latest/build/highlight.min.js"></script>
+  <script>
+    hljs.initHighlightingOnLoad();
+  </script>
   </body>
 </html>

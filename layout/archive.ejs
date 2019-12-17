@@ -1,48 +1,33 @@
 <%
-const categoriesList = list_categories({ show_count: false });
-const tagsList = list_tags({ show_count: false });
-const archivesList = list_archives({ show_count: false });
+const categoriesList = list_categories({show_count: false});
+const tagsList = list_tags({show_count: false});
+const archivesList = list_archives({show_count: false});
 %>
 
 <article id="archive">
-<% if (is_year() === false) { %>
-    <h1>Archives</h1>
-    <% if (theme.atom !== undefined) { %>
-      <p>
-        The feed is available via
-        <a href="<%=theme.atom%>">atom</a>.
-      </p>
-      <br>
-    <% } %>
-    <aside>
-      <h2>Categories</h2>
-      <% if (categoriesList !== "") { %>
-        <%-categoriesList%>
-      <% } else { %>
-        <p>None.</p>
-      <% } %>
-    </aside>
-    <br>
-    <aside>
-      <h2>Archives</h2>
-      <% if (archivesList !== "") { %>
-        <%-archivesList%>
-      <% } else { %>
-        <p>None.</p>
-      <% } %>
-    </aside>
-<% } else { %>
-  <h1><%=page.month + '/' + page.year%></h1>
-  <% page.posts.each(article => { %>
-  <div class="archive-item">
-    <a href="<%=url_for(article.path)%>">
-      <%=article.title%>
-    </a>
-    <time datetime="<%=date_xml(article.date)%>">
-      <%=date(article.date)%>
-    </time>
-  </div>
-  <% }) %>
+    <% if (is_year() === false) { %>
+        <h2>Tag cloud</h2>
+        <%- tagcloud({min_font: 16, max_font: 35, amount: 999, color: true, start_color: 'gray', end_color: 'black'}) %>
+        <% if (categoriesList !== "") { %>
+        <h2>Categories</h2>
+        <%- categoriesList %>
+        <% } %>
+        <% if (archivesList !== "") { %>
+        <h2>Archives</h2>
+        <%- archivesList %>
+        <% }%>
+    <% } else { %>
+    <h1><%= page.month + '/' + page.year %></h1>
+    <% page.posts.each(article => { %>
+    <div class="archive-item">
+        <a href="<%= url_for(article.path) %>">
+            <%= article.title %>
+        </a>
+        <time datetime="<%= date_xml(article.date) %>">
+            <%= date(article.date) %>
+        </time>
+    </div>
+    <% }) %>
 </article>
 <% } %>
 <%- partial('partials/paginator') %>

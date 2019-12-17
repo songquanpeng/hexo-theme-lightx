@@ -47,7 +47,7 @@ footer a{
 nav {
   font-weight: bolder;
   font-size: larger;
-  border-bottom: 2px solid #ddd;
+  border-bottom: 2px solid #ccc;
   margin-bottom: 8px;
 }
 
@@ -60,17 +60,17 @@ nav ul {
   justify-content: left;
 }
 
-nav li a {
+nav li {
   display: inline-block;
   box-sizing: border-box;
   height: 50px;
   text-align: center;
   padding: 8px 16px 4px 2px;
-  text-decoration: none;
 }
 
 nav a:link, nav a:visited, nav a:active{
   color: #aaa;
+  text-decoration: none;
 }
 
 nav a:hover{
@@ -258,7 +258,7 @@ article h6 {
   font-family: "Roboto Slab", "Droid Serif", AvenirNext-Bold, "Avenir Bold",
     Georgia, "Times New Roman", Times, "WenQuanYi Micro Hei", Heiti, Impact,
     Charcoal, serif;
-  font-weight: bold;
+  font-weight: normal;
 }
 
 article h2,
@@ -295,4 +295,14 @@ article table tr:nth-child(2n) {
 article a{
   color: #368CCB;
   text-decoration: none;
+}
+
+article blockquote {
+  margin-left: 0;
+  padding: 0 1em;
+  border-left: 5px solid #ddd;
+}
+
+article pre {
+  overflow-x: auto;
 }
