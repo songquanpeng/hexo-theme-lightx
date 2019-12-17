@@ -1,5 +1,3 @@
 slogan: "Everything is fine."
-# CDN, options: cdn.staticfile.org, cdnjs.cloudflare.com, cdnjs.cloudflare.com, 
-cdn: cdn.staticfile.org
 # Your disqus "website name"
 disqus: iometa
