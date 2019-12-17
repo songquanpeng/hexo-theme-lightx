@@ -1,4 +1,4 @@
-<div id="tag">
+<article id="tag">
   <h1><%=page.tag%></h1>
   <% page.posts.each(article => { %>
     <div class="tag-item">
@@ -10,8 +10,6 @@
       </time>
     </div>
   <% }) %>
-</div>
+</article>
+<%- partial('partials/paginator') %>
 
-<div id="paginator">
-  <%-paginator()%>
-</div>

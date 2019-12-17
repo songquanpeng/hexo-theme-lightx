@@ -12,10 +12,10 @@
 <!--    <span class="badge bg-success" onclick="event.stopPropagation();location.href='<%=url_for(post.path)+`#comment` %>'">Comments:-->
 <!--      <span class="disqus-comment-count" data-disqus-identifier="<%= post._id %>"></span>-->
 <!--    </span>-->
-    <span class="badge bg-info">Views: 233 </span>
+<!--    <span class="badge bg-info">Views: 233 </span>-->
   </div>
   <div class="card-text">
-    <%- truncate(strip_html(post.content), {length: 100, omission: ' ...'}) %>
+    <%- truncate(strip_html(post.content), {length: 150, omission: '...'}) %>
   </div>
 </div>
 <% }); %> <% } %>

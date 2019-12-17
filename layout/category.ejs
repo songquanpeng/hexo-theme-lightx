@@ -1,5 +1,4 @@
-
-<div id="category">
+<article id="category">
   <h1><%=page.category%></h1>
   <% page.posts.each(article => { %>
     <div class="category-item">
@@ -11,8 +10,6 @@
       </time>
     </div>
   <% }); %>
-</div>
+</article>
+<%- partial('partials/paginator') %>
 
-<div id="paginator">
-  <%-paginator()%>
-</div>

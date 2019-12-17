@@ -1,6 +1,8 @@
-<!-- <div id="bottom-outer">
-  <div id="bottom-inner">
-    Site by <%=theme.author%> using
-    <a href="<%=config.root%>">Home</a>
-  </div>
-</div> -->
+<% let date = new Date(); const year = date.getFullYear();%>
+<footer>
+    <div>
+        <p>
+            © <%= year%> <a href="<%= config.url %>"><%=config.author%></a>. Powered by <a href="https://hexo.io/">Hexo</a>. Theme <a href="https://github.com/songquanpeng/hexo-theme-lightx">lightx</a>
+        </p>
+    </div>
+</footer>

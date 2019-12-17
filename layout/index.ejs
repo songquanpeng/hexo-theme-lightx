@@ -1,10 +1,3 @@
 <%- partial('partials/post-list') %>
-<div class="paginator">
-    <% if (page.prev){ %>
-        <div class="prev" onclick="location.href='<%- config.root %><%- page.prev_link %>'">PREV</div>
-    <% } %>
-    <% if (page.next){ %>
-        <div class="next" onclick="location.href='<%- config.root %><%- page.next_link %>'">NEXT</div>
-    <% } %>
-</div>
-<%- tagcloud({min_font: 16, max_font: 35, amount: 999, color: true, start_color: 'gray', end_color: 'black',}) %>
+<%- partial('partials/paginator') %>
+<%- tagcloud({min_font: 16, max_font: 35, amount: 999, color: true, start_color: 'gray', end_color: 'black'}) %>

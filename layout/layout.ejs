@@ -12,16 +12,22 @@ pageTitle += ' [ ' + config.title + ' ]';
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>pageTitle</title>
-    <link rel="stylesheet" href="/css/lightx.css" />
+    <title><%=pageTitle%></title>
+    <link rel="stylesheet" href="/css/lightx.css"/>
   </head>
   <body>
-    <div class="wrapper">
-      <div class="container">
-        <%-partial('partials/navigation-bar')%>
-        <%- body %>
-        <%-partial('partials/footer')%>
+  <div id="page-container">
+    <div id="content-wrap">
+      <div class="wrapper">
+        <div class="container">
+            <%-partial('partials/navigation-bar')%>
+            <%- body %>
+        </div>
       </div>
     </div>
+    <div id="footer">
+      <%-partial('partials/footer')%>
+    </div>
+  </div>
   </body>
 </html>
