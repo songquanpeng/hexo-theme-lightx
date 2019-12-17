@@ -10,7 +10,7 @@
     <% }); %>
     <span class="badge bg-secondary" onclick="event.stopPropagation();location.href='/archives/<%= date(post.date).split('-').slice(0,2).join('/') %>'"><%=date(post.date)%></span>
     <span class="badge bg-success" onclick="event.stopPropagation();location.href='<%=url_for(post.path)+`#comment` %>'">
-      <span class="disqus-comment-count" data-disqus-identifier="<%= post._id %>"></span>
+      <span class="disqus-comment-count" data-disqus-identifier="<%= post._id %>">0 Comments</span>
     </span>
 <!--    <span class="badge bg-info">Views: 233 </span>-->
   </div>
