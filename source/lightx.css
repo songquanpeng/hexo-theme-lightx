@@ -101,6 +101,7 @@ nav a:hover{
 }
 
 .card-text {
+    overflow-wrap: break-word;
     padding: 12px;
 }
 
@@ -306,4 +307,8 @@ article pre {
 article code {
     color: #bc9458;
     padding: .065em .4em;
+}
+
+article .copyright{
+    display: none;
 }
