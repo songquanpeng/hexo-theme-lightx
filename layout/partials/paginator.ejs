@@ -1,8 +1,13 @@
 <div class="paginator">
     <% if (page.prev){ %>
         <div class="prev" onclick="location.href='<%- config.root %><%- page.prev_link %>'">PREV</div>
-    <% } %>
+    <% } else{%>
+        <div class="prev" style="visibility: hidden;" onclick="location.href='<%- config.root %><%- page.prev_link %>'">PREV</div>
+    <%}%>
+    
     <% if (page.next){ %>
         <div class="next" onclick="location.href='<%- config.root %><%- page.next_link %>'">NEXT</div>
-    <% } %>
+    <% } else{%>
+        <div class="next" style="visibility: hidden;" onclick="location.href='<%- config.root %><%- page.next_link %>'">NEXT</div>
+    <%}%>
 </div>
