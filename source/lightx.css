@@ -15,7 +15,7 @@ body {
 
 #page-container {
     position: relative;
-    min-height: 100vh;
+    min-height: 97vh;
 }
 
 #content-wrap {
@@ -23,8 +23,11 @@ body {
 }
 
 #footer {
+    position: absolute;
     bottom: 0;
     height: 4rem;
+    left: 0;
+    right: 0;
 }
 
 footer {
@@ -43,7 +46,6 @@ footer a {
 }
 
 nav {
-    font-weight: 200;
     font-size: larger;
     border-bottom: 2px solid #000;
     margin-bottom: 8px;
