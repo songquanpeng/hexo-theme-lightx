@@ -6,8 +6,10 @@
             © <%= year%> <a href="<%= config.url %>"><%=config.author%></a>.
             Powered by <a href="https://hexo.io/">Hexo</a>.
             Theme <a href="https://github.com/songquanpeng/hexo-theme-lightx">lightx</a>.
+            <% if(theme.busuanzi) {%>
             PV: <span id="busuanzi_value_site_pv"></span>
             UV: <span id="busuanzi_value_site_uv"></span>
+            <%}%>
         </p>
     </div>
 </footer>

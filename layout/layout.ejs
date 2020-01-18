@@ -37,7 +37,9 @@ pageTitle += ' | ' + config.title;
   <% if(theme.disqus && (theme.disqus.trim() !== "")){%>
     <script id="dsq-count-scr" src="//<%= theme.disqus %>.disqus.com/count.js" async></script>
   <%}%>
+  <% if(theme.busuanzi) {%>
   <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <%}%>
   <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@latest/build/highlight.min.js"></script>
   <script>
     hljs.initHighlightingOnLoad();
