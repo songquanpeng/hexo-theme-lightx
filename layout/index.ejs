@@ -19,7 +19,7 @@
         <%if(post.excerpt){%>
           <%- post.excerpt %>
         <%}else{%>
-          <%- truncate(strip_html(post.content), {length: 150, omission: '...'}) %>
+          <%- truncate(strip_html(post.content), {length: 150, omission: ' ...'}) %>
         <%}%>
       </div>
     </div>

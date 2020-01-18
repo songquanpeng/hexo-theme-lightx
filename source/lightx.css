@@ -143,6 +143,30 @@ nav a:hover{
     padding: 10px;
 }
 
+.toc-level-1{
+    list-style-type: none;
+}
+
+.toc-level-2 {
+    list-style-type: decimal;
+}
+
+.toc-level-3 {
+    list-style-type: disc;
+}
+
+.toc-level-4 {
+    list-style-type: circle;
+}
+
+.toc-level-5 {
+    list-style-type: square;
+}
+
+.toc-level-6 {
+    list-style-type: square;
+}
+
 #back-top {
     /* display: block; */
     display: none;
