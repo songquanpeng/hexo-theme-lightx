@@ -167,6 +167,10 @@ nav a:hover{
     list-style-type: square;
 }
 
+.archive-item time, .tag-item time , .category-item time{
+    float: right;
+}
+
 #back-top {
     /* display: block; */
     display: none;
