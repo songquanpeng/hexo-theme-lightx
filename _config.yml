@@ -1,8 +1,8 @@
 # Your disqus shortname, find it here: https://iometa.disqus.com/admin/settings/general/.
-disqus: iometa
+disqus: 
 # Find your favourite code style here: https://www.jsdelivr.com/package/npm/highlight.js?path=styles.
 highlight: https://cdn.jsdelivr.net/npm/highlight.js@9.17.1/styles/railscasts.css
 # Enable busuanzi count? It will record your site's pv and uv.
 busuanzi: false
 # Google analytics id: https://analytics.google.com/analytics/.
-analyticsTrackingID: UA-141101198-4
+analyticsTrackingID: 
