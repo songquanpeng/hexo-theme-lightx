@@ -15,6 +15,9 @@ pageTitle += ' | ' + config.title;
     <title><%=pageTitle%></title>
     <link rel="stylesheet" href="<%= theme.highlight %>">
     <link rel="stylesheet" href="/lightx.css"/>
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="apple-touch-icon" href="/icon512.png">
+    <meta name="theme-color" content="#ffffff"/>
     <% if(theme.analyticsTrackingID && (theme.analyticsTrackingID.trim() !== "")){%>
     <script async src="https://www.googletagmanager.com/gtag/js?id=<%- theme.analyticsTrackingID.trim() %>"></script>
     <script>
@@ -27,6 +30,19 @@ pageTitle += ' | ' + config.title;
     <%}%>
   </head>
   <body>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function () {
+          navigator.serviceWorker.register('/sw.js', {scope: '/'})
+            .then(function (registration) {
+              // console.log('ServiceWorker registration successful with scope: ', registration.scope);
+            })
+            .catch(function (err) {
+              console.log('ServiceWorker registration failed: ', err);
+            });
+        });
+      }
+    </script>
   <div id="page-container">
     <div id="content-wrap">
       <div class="wrapper">
