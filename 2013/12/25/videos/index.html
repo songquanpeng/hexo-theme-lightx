@@ -7,9 +7,9 @@
     <title>Videos | Hexo</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.1.1/styles/solarized-light.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
-    <link rel="stylesheet" href="/custom.css"/>
-    <link rel="manifest" href="/manifest.json" />
-    <link rel="apple-touch-icon" href="/icon512.png">
+    <link rel="stylesheet" href="/hexo-theme-lightx/custom.css"/>
+    <link rel="manifest" href="/hexo-theme-lightx/manifest.json" />
+    <link rel="apple-touch-icon" href="/hexo-theme-lightx/icon512.png">
     <meta name="theme-color" content="#ffffff"/>
     
   <meta name="generator" content="Hexo 4.2.1"></head>
@@ -17,7 +17,7 @@
     <script>
       if ('serviceWorker' in navigator && false) {
         window.addEventListener('load', function () {
-          navigator.serviceWorker.register('/sw.js', {scope: '/'})
+          navigator.serviceWorker.register('/hexo-theme-lightx/sw.js', {scope: '/hexo-theme-lightx/'})
             .then(function (registration) {
               // console.log('ServiceWorker registration successful with scope: ', registration.scope);
             })
@@ -32,7 +32,7 @@
   <div class="container">
       <div class="navbar-brand">
           <a class="navbar-item" href="/">
-              <img src="/icon192.png" height="50">
+              <img src="/hexo-theme-lightx/icon192.png" height="50">
           </a>
           <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
              data-target="mainNavbar">
@@ -43,9 +43,9 @@
       </div>
       <div id="mainNavbar" class="navbar-menu">
           <div class="navbar-start">
-              <a class="navbar-item" href="/"> Hexo </a>
-              <a class="navbar-item" href="/archives"> Archives </a>
-              <a class="navbar-item" href="/about"> About </a>
+              <a class="navbar-item" href="/hexo-theme-lightx/"> Hexo </a>
+              <a class="navbar-item" href="/hexo-theme-lightx/archives"> Archives </a>
+              <a class="navbar-item" href="/hexo-theme-lightx/about"> About </a>
           </div>
       </div>
   </div>
@@ -83,6 +83,22 @@ document.addEventListener('DOMContentLoaded', () => {
   </article>
   <div id="comment">
     
+    <div id="disqus_thread"></div>
+    <script>
+      var disqus_config = function() {
+        this.page.url = "http://yoursite.com/2013/12/25/videos/"; // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = "ckbuv76ai000nrggjd51b7txr"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+      };
+  
+      (function() {
+        var d = document,
+          s = d.createElement("script");
+        s.src = "https://iometa.disqus.com/embed.js";
+        s.setAttribute("data-timestamp", +new Date());
+        (d.head || d.body).appendChild(s);
+      })();
+    </script>
+    
 </div>
 </div>
         </div>
@@ -99,6 +115,8 @@ document.addEventListener('DOMContentLoaded', () => {
     </div>
 </footer>
   </div>
+  
+    <script id="dsq-count-scr" src="//iometa.disqus.com/count.js" async></script>
   
   
   <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@latest/build/highlight.min.js"></script>

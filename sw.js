@@ -2,9 +2,9 @@ this.addEventListener('install', function (event) {
   event.waitUntil(
     caches.open('cache-v1').then(function (cache) {
       return cache.addAll([
-        '/',
-        '/lightx.css',
-        '/favicon.ico'
+        '<%= theme.root %>',
+        '<%= theme.root %>lightx.css',
+        '<%= theme.root %>favicon.ico'
       ]);
     })
   );
