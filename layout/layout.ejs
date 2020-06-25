@@ -14,7 +14,8 @@ pageTitle += ' | ' + config.title;
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title><%=pageTitle%></title>
     <link rel="stylesheet" href="<%= theme.highlight %>">
-    <link rel="stylesheet" href="/lightx.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+    <link rel="stylesheet" href="/custom.css"/>
     <link rel="manifest" href="/manifest.json" />
     <link rel="apple-touch-icon" href="/icon512.png">
     <meta name="theme-color" content="#ffffff"/>
@@ -31,7 +32,7 @@ pageTitle += ' | ' + config.title;
   </head>
   <body>
     <script>
-      if ('serviceWorker' in navigator) {
+      if ('serviceWorker' in navigator && false) {
         window.addEventListener('load', function () {
           navigator.serviceWorker.register('/sw.js', {scope: '/'})
             .then(function (registration) {
@@ -44,21 +45,13 @@ pageTitle += ' | ' + config.title;
       }
     </script>
   <div id="page-container">
+    <%-partial('partials/nav')%>
     <div id="content-wrap">
-      <div class="wrapper">
         <div class="container">
-            <%-partial('partials/nav')%>
-            <%- body %>
+          <%- body %>
         </div>
-      </div>
     </div>
-    <div id="footer">
-      <div class="wrapper">
-        <div class="container">
-          <%-partial('partials/footer')%>
-        </div>
-      </div>
-    </div>
+    <%-partial('partials/footer')%>
   </div>
   <% if(theme.disqus && (theme.disqus.trim() !== "")){%>
     <script id="dsq-count-scr" src="//<%= theme.disqus %>.disqus.com/count.js" async></script>

@@ -1,15 +1,28 @@
-<article id="tag">
-  <h1><%=page.tag%></h1>
-  <% page.posts.each(article => { %>
-    <div class="tag-item">
-      <a href="<%=url_for(article.path)%>">
-        <%=article.title%>
-      </a>
-      <time datetime="<%=date_xml(article.date)%>">
-        <%=date(article.date)%>
-      </time>
-    </div>
-  <% }) %>
-</article>
+<div class="container">
+  <p class="title is-3"><%=page.tag%></p>
+  <table class="table is-fullwidth is-hoverable is-bordered is-striped">
+      <thead>
+      <tr>
+          <th>Title</th>
+          <th>Post Date</th>
+      </tr>
+      </thead>
+      <tbody>
+        <% page.posts.each(article => { %>
+          <tr>
+              <td>
+                <a href="<%=url_for(article.path)%>">
+                  <%=article.title%>
+                </a>
+              </td>
+              <td>
+                <time datetime="<%=date_xml(article.date)%>">
+                  <%=date(article.date)%>
+                </time>
+              </td>
+          </tr>
+        <% }); %>
+      </tbody>
+  </table>
+</div>
 <%- partial('partials/paginator') %>
-

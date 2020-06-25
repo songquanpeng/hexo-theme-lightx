@@ -1,7 +1,6 @@
 <% let date = new Date(); const year = date.getFullYear();%>
-<button id="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">TOP</button>
-<footer>
-    <div>
+<footer id="footer">
+    <div class="content has-text-centered">
         <p>
             © <%= year%> <a href="<%= config.url %>"><%=config.author%></a>.
             Powered by <a href="https://hexo.io/">Hexo</a>.

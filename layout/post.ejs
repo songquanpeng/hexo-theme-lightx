@@ -1,11 +1,11 @@
-<article>
-  <h1><%-page.title%></h1>
-  <div class="contents">
-    <%- toc(page.content, {list_number:false}) %>
-  </div>
-  <%-page.content%>
-  
-  <p class="copyright"><strong>Links: <a href="<%-page.permalink%>"><%-page.permalink%></a></strong></p>  
-</article>
-
-<%- partial('partials/comment') %>
+<div class="article-container">
+  <h1 class="title is-3 is-4-mobile"><%-page.title%></h1>
+  <article>
+      <div class="contents">
+        <%- toc(page.content, {list_number:false}) %>
+      </div>
+      <%-page.content%>
+      <p class="copyright"><strong>Links: <a href="<%-page.permalink%>"><%-page.permalink%></a></strong></p>
+  </article>
+  <%- partial('partials/comment') %>
+</div>
