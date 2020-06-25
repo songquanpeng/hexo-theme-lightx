@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Archives | Hexo</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.1.1/styles/solarized-light.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+    <link rel="stylesheet" href="/custom.css"/>
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="apple-touch-icon" href="/icon512.png">
+    <meta name="theme-color" content="#ffffff"/>
+    
+  <meta name="generator" content="Hexo 4.2.1"></head>
+  <body>
+    <script>
+      if ('serviceWorker' in navigator && false) {
+        window.addEventListener('load', function () {
+          navigator.serviceWorker.register('/sw.js', {scope: '/'})
+            .then(function (registration) {
+              // console.log('ServiceWorker registration successful with scope: ', registration.scope);
+            })
+            .catch(function (err) {
+              console.log('ServiceWorker registration failed: ', err);
+            });
+        });
+      }
+    </script>
+  <div id="page-container">
+    <nav class="navbar nav-shadow" role="navigation" aria-label="main navigation">
+  <div class="container">
+      <div class="navbar-brand">
+          <a class="navbar-item" href="/">
+              <img src="/icon192.png" height="50">
+          </a>
+          <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
+             data-target="mainNavbar">
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+          </a>
+      </div>
+      <div id="mainNavbar" class="navbar-menu">
+          <div class="navbar-start">
+              <a class="navbar-item" href="/"> Hexo </a>
+              <a class="navbar-item" href="/archives"> Archives </a>
+              <a class="navbar-item" href="/about"> About </a>
+          </div>
+      </div>
+  </div>
+</nav>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+  if ($navbarBurgers.length > 0) {
+    $navbarBurgers.forEach( el => {
+      el.addEventListener('click', () => {
+        const target = el.dataset.target;
+        const $target = document.getElementById(target);
+        el.classList.toggle('is-active');
+        $target.classList.toggle('is-active');
+      });
+    });
+  }
+});
+</script>
+    <div id="content-wrap">
+        <div class="container">
+          
+
+<div class="container">
+    
+        <p class="title is-3">Tag cloud</p>
+        <a href="/tags/Bar/" style="font-size: 35px; color: #000">Bar</a> <a href="/tags/Baz/" style="font-size: 16px; color: #808080">Baz</a> <a href="/tags/Foo/" style="font-size: 35px; color: #000">Foo</a>
+        <br/>
+        <br/>
+        
+            <p class="title is-3">Categories</p>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Foo/">Foo</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Foo/Bar/">Bar</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Foo/Bar/Baz/">Baz</a></li></ul></li></ul></li></ul>
+            <br/>
+        
+        
+            <p class="title is-3">Archives</p>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/12/">December 2013</a></li></ul>
+            <br/>
+        
+    
+<nav class="pagination is-centered" role="navigation" aria-label="pagination">
+    <a class="pagination-previous shadow" href=".">Previous</a>
+    <a class="pagination-next shadow" href=".">Next Page</a>
+</nav>
+
+        </div>
+    </div>
+    
+<footer id="footer">
+    <div class="content has-text-centered">
+        <p>
+            © 2020 <a href="http://yoursite.com">John Doe</a>.
+            Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>.
+            Theme <a href="https://github.com/songquanpeng/hexo-theme-lightx" target="_blank" rel="noopener">lightx</a>.
+            
+        </p>
+    </div>
+</footer>
+  </div>
+  
+  
+  <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@latest/build/highlight.min.js"></script>
+  <script>
+    hljs.initHighlightingOnLoad();
+  </script>
+  </body>
+</html>

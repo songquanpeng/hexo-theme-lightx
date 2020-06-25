@@ -1,0 +1,332 @@
+
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Code Highlight Style test | Hexo</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.1.1/styles/solarized-light.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+    <link rel="stylesheet" href="/custom.css"/>
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="apple-touch-icon" href="/icon512.png">
+    <meta name="theme-color" content="#ffffff"/>
+    
+  <meta name="generator" content="Hexo 4.2.1"></head>
+  <body>
+    <script>
+      if ('serviceWorker' in navigator && false) {
+        window.addEventListener('load', function () {
+          navigator.serviceWorker.register('/sw.js', {scope: '/'})
+            .then(function (registration) {
+              // console.log('ServiceWorker registration successful with scope: ', registration.scope);
+            })
+            .catch(function (err) {
+              console.log('ServiceWorker registration failed: ', err);
+            });
+        });
+      }
+    </script>
+  <div id="page-container">
+    <nav class="navbar nav-shadow" role="navigation" aria-label="main navigation">
+  <div class="container">
+      <div class="navbar-brand">
+          <a class="navbar-item" href="/">
+              <img src="/icon192.png" height="50">
+          </a>
+          <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
+             data-target="mainNavbar">
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+          </a>
+      </div>
+      <div id="mainNavbar" class="navbar-menu">
+          <div class="navbar-start">
+              <a class="navbar-item" href="/"> Hexo </a>
+              <a class="navbar-item" href="/archives"> Archives </a>
+              <a class="navbar-item" href="/about"> About </a>
+          </div>
+      </div>
+  </div>
+</nav>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+  if ($navbarBurgers.length > 0) {
+    $navbarBurgers.forEach( el => {
+      el.addEventListener('click', () => {
+        const target = el.dataset.target;
+        const $target = document.getElementById(target);
+        el.classList.toggle('is-active');
+        $target.classList.toggle('is-active');
+      });
+    });
+  }
+});
+</script>
+    <div id="content-wrap">
+        <div class="container">
+          <div class="article-container">
+  <h1 class="title is-3 is-4-mobile">Code Highlight Style test</h1>
+  <article>
+      <div class="contents">
+        
+      </div>
+      <p>Make sure all the code blocks highlighted correctly. All the code samples are come from the demo of <a href="https://highlightjs.org" target="_blank" rel="noopener">https://highlightjs.org</a></p>
+<a id="more"></a>
+
+<pre><code class="plain">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&#39;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</code></pre>
+<pre><code class="rust">#[derive(Debug)]
+pub enum State {
+    Start,
+    Transient,
+    Closed,
+}
+
+impl From&lt;&amp;&#39;a str&gt; for State {
+    fn from(s: &amp;&#39;a str) -&gt; Self {
+        match s {
+            &quot;start&quot; =&gt; State::Start,
+            &quot;closed&quot; =&gt; State::Closed,
+            _ =&gt; unreachable!(),
+        }
+    }
+}</code></pre>
+<pre><code class="json">[
+  {
+    &quot;title&quot;: &quot;apples&quot;,
+    &quot;count&quot;: [12000, 20000],
+    &quot;description&quot;: {&quot;text&quot;: &quot;...&quot;, &quot;sensitive&quot;: false}
+  },
+  {
+    &quot;title&quot;: &quot;oranges&quot;,
+    &quot;count&quot;: [17500, null],
+    &quot;description&quot;: {&quot;text&quot;: &quot;...&quot;, &quot;sensitive&quot;: false}
+  }
+]</code></pre>
+<pre><code class="python">@requires_authorization
+def somefunc(param1=&#39;&#39;, param2=0):
+    r&#39;&#39;&#39;A docstring&#39;&#39;&#39;
+    if param1 &gt; param2: # interesting
+        print &#39;Gre\&#39;ater&#39;
+    return (param2 - param1 + 1 + 0b10l) or None
+
+class SomeClass:
+    pass
+
+&gt;&gt;&gt; message = &#39;&#39;&#39;interpreter
+... prompt&#39;&#39;&#39;</code></pre>
+<pre><code class="html">&lt;!DOCTYPE html&gt;
+&lt;title&gt;Title&lt;/title&gt;
+
+&lt;style&gt;body {width: 500px;}&lt;/style&gt;
+
+&lt;script type=&quot;application/javascript&quot;&gt;
+  function $init() {return true;}
+&lt;/script&gt;
+
+&lt;body&gt;
+  &lt;p checked class=&quot;title&quot; id=&#39;title&#39;&gt;Title&lt;/p&gt;
+  &lt;!-- here goes the rest of the page --&gt;
+&lt;/body&gt;</code></pre>
+<pre><code class="javascript">function $initHighlight(block, cls) {
+  try {
+    if (cls.search(/\bno\-highlight\b/) != -1)
+      return process(block, true, 0x0F) +
+             ` class=&quot;${cls}&quot;`;
+  } catch (e) {
+    /* handle exception */
+  }
+  for (var i = 0 / 2; i &lt; classes.length; i++) {
+    if (checkCondition(classes[i]) === undefined)
+      console.log(&#39;undefined&#39;);
+  }
+
+  return (
+    &lt;div&gt;
+      &lt;web-component&gt;{block}&lt;/web-component&gt;
+    &lt;/div&gt;
+  )
+}
+
+export $initHighlight;</code></pre>
+<pre><code class="cpp">#include &lt;iostream&gt;
+
+int main(int argc, char *argv[]) {
+
+  /* An annoying &quot;Hello World&quot; example */
+  for (auto i = 0; i &lt; 0xFFFF; i++)
+    cout &lt;&lt; &quot;Hello, World!&quot; &lt;&lt; endl;
+
+  char c = &#39;\n&#39;;
+  unordered_map &lt;string, vector&lt;string&gt; &gt; m;
+  m[&quot;key&quot;] = &quot;\\\\&quot;; // this is an error
+
+  return -2e3 + 12l;
+}</code></pre>
+<pre><code class="sql">CREATE TABLE &quot;topic&quot; (
+    &quot;id&quot; serial NOT NULL PRIMARY KEY,
+    &quot;forum_id&quot; integer NOT NULL,
+    &quot;subject&quot; varchar(255) NOT NULL
+);
+ALTER TABLE &quot;topic&quot;
+ADD CONSTRAINT forum_id FOREIGN KEY (&quot;forum_id&quot;)
+REFERENCES &quot;forum&quot; (&quot;id&quot;);
+
+-- Initials
+insert into &quot;topic&quot; (&quot;forum_id&quot;, &quot;subject&quot;)
+values (2, &#39;D&#39;&#39;artagnian&#39;);</code></pre>
+<pre><code class="objectivec">#import &lt;UIKit/UIKit.h&gt;
+#import &quot;Dependency.h&quot;
+
+@protocol WorldDataSource
+@optional
+- (NSString*)worldName;
+@required
+- (BOOL)allowsToLive;
+@end
+
+@property (nonatomic, readonly) NSString *title;
+- (IBAction) show;
+@end</code></pre>
+<pre><code class="java">/**
+ * @author John Smith &lt;john.smith@example.com&gt;
+*/
+package l2f.gameserver.model;
+
+public abstract class L2Char extends L2Object {
+  public static final Short ERROR = 0x0001;
+
+  public void moveTo(int x, int y, int z) {
+    _ai = null;
+    log(&quot;Should not be called&quot;);
+    if (1 &gt; 5) { // wtf!?
+      return;
+    }
+  }
+}</code></pre>
+<pre><code class="swift">import Foundation
+
+@objc class Person: Entity {
+  var name: String!
+  var age:  Int!
+
+  init(name: String, age: Int) {
+    /* /* ... */ */
+  }
+
+  // Return a descriptive string for this person
+  func description(offset: Int = 0) -&gt; String {
+    return &quot;\(name) is \(age + offset) years old&quot;
+  }
+}</code></pre>
+<pre><code class="css">@font-face {
+  font-family: Chunkfive; src: url(&#39;Chunkfive.otf&#39;);
+}
+
+body, .usertext {
+  color: #F0F0F0; background: #600;
+  font-family: Chunkfive, sans;
+}
+
+@import url(print.css);
+@media print {
+  a[href^=http]::after {
+    content: attr(href)
+  }
+}</code></pre>
+<pre><code class="ruby"># The Greeter class
+class Greeter
+  def initialize(name)
+    @name = name.capitalize
+  end
+
+  def salute
+    puts &quot;Hello #{@name}!&quot;
+  end
+end
+
+g = Greeter.new(&quot;world&quot;)
+g.salute</code></pre>
+<pre><code class="makefile"># Makefile
+
+BUILDDIR      = _build
+EXTRAS       ?= $(BUILDDIR)/extras
+
+.PHONY: main clean
+
+main:
+    @echo &quot;Building main facility...&quot;
+    build_main $(BUILDDIR)
+
+clean:
+    rm -rf $(BUILDDIR)/*</code></pre>
+<pre><code class="go">package main
+
+import &quot;fmt&quot;
+
+func main() {
+    ch := make(chan float64)
+    ch &lt;- 1.0e10    // magic number
+    x, ok := &lt;- ch
+    defer fmt.Println(`exitting now\`)
+    go println(len(&quot;hello world!&quot;))
+    return
+}</code></pre>
+<pre><code class="bash">#!/bin/bash
+
+###### CONFIG
+ACCEPTED_HOSTS=&quot;/root/.hag_accepted.conf&quot;
+BE_VERBOSE=false
+
+if [ &quot;$UID&quot; -ne 0 ]
+then
+  echo &quot;Superuser rights required&quot;
+  exit 2
+fi
+
+genApacheConf(){
+  echo -e &quot;# Host ${HOME_DIR}$1/$2 :&quot;
+}</code></pre>
+<pre><code class="ini">; boilerplate
+[package]
+name = &quot;some_name&quot;
+authors = [&quot;Author&quot;]
+description = &quot;This is \
+a description&quot;
+
+[[lib]]
+name = ${NAME}
+default = True
+auto = no
+counter = 1_000</code></pre>
+
+      <p class="copyright"><strong>Links: <a href="http://yoursite.com/2019/07/25/code-highlight/">http://yoursite.com/2019/07/25/code-highlight/</a></strong></p>
+  </article>
+  <div id="comment">
+    
+</div>
+</div>
+        </div>
+    </div>
+    
+<footer id="footer">
+    <div class="content has-text-centered">
+        <p>
+            © 2020 <a href="http://yoursite.com">John Doe</a>.
+            Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>.
+            Theme <a href="https://github.com/songquanpeng/hexo-theme-lightx" target="_blank" rel="noopener">lightx</a>.
+            
+        </p>
+    </div>
+</footer>
+  </div>
+  
+  
+  <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@latest/build/highlight.min.js"></script>
+  <script>
+    hljs.initHighlightingOnLoad();
+  </script>
+  </body>
+</html>
