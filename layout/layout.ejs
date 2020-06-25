@@ -15,9 +15,9 @@ pageTitle += ' | ' + config.title;
     <title><%=pageTitle%></title>
     <link rel="stylesheet" href="<%= theme.highlight %>">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
-    <link rel="stylesheet" href="/custom.css"/>
-    <link rel="manifest" href="/manifest.json" />
-    <link rel="apple-touch-icon" href="/icon512.png">
+    <link rel="stylesheet" href="<%= config.root %>custom.css"/>
+    <link rel="manifest" href="<%= config.root %>manifest.json" />
+    <link rel="apple-touch-icon" href="<%= config.root %>icon512.png">
     <meta name="theme-color" content="#ffffff"/>
     <% if(theme.analyticsTrackingID && (theme.analyticsTrackingID.trim() !== "")){%>
     <script async src="https://www.googletagmanager.com/gtag/js?id=<%- theme.analyticsTrackingID.trim() %>"></script>
@@ -34,7 +34,7 @@ pageTitle += ' | ' + config.title;
     <script>
       if ('serviceWorker' in navigator && false) {
         window.addEventListener('load', function () {
-          navigator.serviceWorker.register('/sw.js', {scope: '/'})
+          navigator.serviceWorker.register('<%= config.root %>sw.js', {scope: '<%= config.root %>'})
             .then(function (registration) {
               // console.log('ServiceWorker registration successful with scope: ', registration.scope);
             })

@@ -1,5 +1,5 @@
 # Your disqus shortname, find it here: https://iometa.disqus.com/admin/settings/general/.
-disqus: 
+disqus: iometa
 # Find your favourite code style here: https://www.jsdelivr.com/package/npm/highlight.js?path=styles.
 highlight: https://cdn.jsdelivr.net/npm/highlight.js@10.1.1/styles/solarized-light.css
 # Enable busuanzi count? It will record your site's pv and uv.
